@@ -1,0 +1,105 @@
+.mui-content {
+  background-color: #fff;
+}
+.mui-slider-group {
+  position: relative;
+}
+.mui-slider-group .mui-slider-item {
+  width: 100%;
+  height: 100%;
+}
+.mui-slider-indicator {
+  bottom: 23px;
+}
+/* 链接块 */
+.nav-link {
+  padding: 0 5px;
+}
+.nav-link a {
+  display: block;
+  float: left;
+  width: 33.33%;
+}
+.nav-link a img {
+  width: 100%;
+}
+.brand {
+  width: 100%;
+  padding: 5px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.brand img {
+  width: 100%;
+}
+.brand ul {
+  padding: 10px 0;
+}
+.brand ul li {
+  width: 25%;
+  float: left;
+}
+.brand ul li a {
+  width: 100%;
+}
+.brand ul li a img {
+  width: 100%;
+}
+.product {
+  width: 100%;
+  padding: 5px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.product img {
+  width: 100%;
+}
+.product .proBox {
+  width: 100%;
+  margin-top: 10px;
+  overflow: hidden;
+}
+.product .proBox li {
+  width: 50%;
+  float: left;
+  padding: 0 5px;
+  margin-top: 10px;
+}
+.product .proBox li a {
+  display: block;
+  box-shadow: 0 0 5px #ccc;
+  overflow: hidden;
+  padding: 0 5px;
+}
+.product .proBox li a img {
+  width: 100%;
+}
+.product .proBox li a .descript {
+  padding: 0 5px;
+  text-align: center;
+  display: block;
+  color: #8f8f94;
+  line-height: 18px;
+}
+.product .proBox li a p {
+  text-align: center;
+  padding: 5px 0;
+}
+.product .proBox li a p span {
+  margin-left: 3px;
+  font-size: 12px;
+}
+.product .proBox li a p span:first-of-type {
+  color: #f30;
+}
+.product .proBox li a p span:last-of-type {
+  text-decoration: line-through;
+}
+.product .proBox li a button {
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #006699;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
