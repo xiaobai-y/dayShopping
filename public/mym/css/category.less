@@ -1,0 +1,25 @@
+// 大盒子
+// 左边固定宽度,右边自适应.外面套个大盒子,设置宽度100%,超出隐藏.左盒子设置左浮动,和80px宽度,高度100%,右盒子设置margin-left值和高度100%;
+.mym-content{
+	position: absolute;
+	top:44px;
+	bottom:50px;	
+	overflow: hidden;
+	width: 100%;
+	
+	.mym-cLeft{
+		float: left;
+		width: 80px;
+		height: 100%;
+		background-color: red;
+		.mui-scroll-wrapper{
+			width: 80px;
+		}
+	}
+	.mym-cRight{
+		// float:left;
+		margin-left:90px;
+		height: 100%;
+		background-color: pink;
+	}
+}

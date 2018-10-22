@@ -1,0 +1,9 @@
+1 搭建项目环境
+vscode + node(服务器) + mysql(数据库)
+按住shift点鼠标右键打开powershell
+移动端框架 mui
+reset css css初始化
+字体图标库 Font Awesome
+字体图标的使用
+配色
+解决上下两张图片的间距 ,三像素

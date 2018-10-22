@@ -1,0 +1,21 @@
+.mym-content {
+  position: absolute;
+  top: 44px;
+  bottom: 50px;
+  overflow: hidden;
+  width: 100%;
+}
+.mym-content .mym-cLeft {
+  float: left;
+  width: 80px;
+  height: 100%;
+  background-color: red;
+}
+.mym-content .mym-cLeft .mui-scroll-wrapper {
+  width: 80px;
+}
+.mym-content .mym-cRight {
+  margin-left: 90px;
+  height: 100%;
+  background-color: pink;
+}
