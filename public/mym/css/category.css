@@ -1,0 +1,60 @@
+.mym-content {
+  position: absolute;
+  top: 44px;
+  bottom: 50px;
+  overflow: hidden;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+.mym-content .mym-cLeft {
+  position: relative;
+  float: left;
+  width: 80px;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.mym-content .mym-cLeft .scrollList1 {
+  width: 80px;
+}
+.mym-content .mym-cLeft .scrollList1 .links {
+  background-color: #fff;
+}
+.mym-content .mym-cLeft .scrollList1 .links a {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 14px;
+}
+.mym-content .mym-cLeft .scrollList1 .links a.active {
+  border-right: 0;
+  background-color: #f5f5f5;
+}
+.mym-content .mym-cRight {
+  position: relative;
+  margin-left: 90px;
+  height: 100%;
+  background-color: #f5f5f5;
+}
+.mym-content .mym-cRight .scrollList2 {
+  height: 100%;
+}
+.mym-content .mym-cRight .scrollList2 .mym-crBox {
+  background-color: #fff;
+  clear: both;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.mym-content .mym-cRight .scrollList2 .mym-crBox li {
+  width: 33.333%;
+  float: left;
+}
+.mym-content .mym-cRight .scrollList2 .mym-crBox li a {
+  display: block;
+  text-align: center;
+}
+.mym-content .mym-cRight .scrollList2 .mym-crBox li a img {
+  width: 100%;
+}

@@ -7,25 +7,24 @@
 	<link rel="stylesheet" href="assets/mui/css/mui.min.css">
 	<link rel="stylesheet" href="assets/mui/css/iconfont.css">
 	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/category.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/login.css">
 	<script src="assets/zepto/zepto.min.js"></script>
 	<script src="assets/mui/js/mui.min.js"></script>
-	<script src="assets/artTemplate/template-native.js"></script>
-	<script src="js/common.js"></script>
-	<script src="js/category.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/public.js"></script>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav header">
 		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-		<h1 class="mui-title">乐淘云购</h1>
-		<a href="search.html" class="mui-icon mui-icon-search mui-pull-right"></a>
+		<h1 class="mui-title">登录</h1>
 	</header>
 	<nav class="mui-bar mui-bar-tab footer">
 		<a class="mui-tab-item" href="index.html">
 			<span class="mui-icon mui-icon-home"></span>
 			<span class="mui-tab-label">首页</span>
 		</a>
-		<a class="mui-tab-item mui-active" href="category.html">
+		<a class="mui-tab-item" href="category.html">
 			<span class="mui-icon mui-icon-bars"></span>
 			<span class="mui-tab-label">分类</span>
 		</a>
@@ -38,42 +37,23 @@
 			<span class="mui-tab-label">会员中心</span>
 		</a>
 	</nav>
-	<div class="my-content">
-		<div class="cate-list">
-			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll">
-					<div id="leftCate"></div>
-				</div>
-			</div>
-		</div>
-		<div class="cont-list">
-			<div class="mui-scroll-wrapper">
-				<div class="mui-scroll">
-					<div class="waper" id="rightCate">
-			
-					</div>
-				</div>
+	<div class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+			<div class="mui-input-group my-login">
+			    <div class="mui-input-row">
+			        <label>用户名</label>
+			   	 <input type="text" class="mui-input-clear" placeholder="用户名" name="username" id="username">
+			    </div>
+			    <div class="mui-input-row">
+			        <label>密码</label>
+			        <input type="password" class="mui-input-password" placeholder="请输入密码" name="password" id="password">
+			    </div>
+			    <div class="mui-input-row login-button">
+			    	<button class="mui-btn mui-btn-primary" id="loginBtn">登录</button>
+			    </div>
+			    <a href="register.html" class="register">免费注册</a>
 			</div>
 		</div>
 	</div>
-	<script id="leftCateTpl" type="text/html">
-		<% for(var i=0;i<data.length;i++){ %>
-			<a href="javascript:;" data-id="<%=data[i].id %>" class="items getSecond"><%= data[i].categoryName %></a>
-		<% } %>
-	</script>
-
-	
-	<script id="rightCateTpl" type="text/html">
-		<% for(var i=0;i<data.length;i++){ %>
-			<a href="#" class="items">
-				<img src="<%=data[i].brandLogo %>">
-				<span><%=data[i].brandName %></span>
-			</a>
-		<% } %>
-
-		<% if(!data.length){ %>
-			<span>暂无数据</span>
-		<% } %>
-	</script>
 </body>
 </html>

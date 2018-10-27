@@ -1,0 +1,67 @@
+// 大盒子
+// 左边固定宽度,右边自适应.外面套个大盒子,设置宽度100%,超出隐藏.左盒子设置左浮动,和80px宽度,高度100%,右盒子设置margin-left值和高度100%;
+.mym-content{
+	position: absolute;
+	top:44px;
+	bottom:50px;	
+	overflow: hidden;
+	width: 100%;
+	background-color: #f5f5f5;
+	.mym-cLeft{
+		position: relative;
+		float: left;
+		width: 80px;
+		height: 100%;
+		background-color: #f5f5f5;
+		.scrollList1{
+			width: 80px;
+			.links{
+				background-color: #fff;
+				a{
+					display: block;
+					// padding:5px;
+					border-bottom:1px solid #ccc;
+					border-right:1px solid #ccc;
+					height: 45px;
+					line-height: 45px;
+					text-align: center;
+					font-size:14px;
+					&.active{
+						border-right:0;
+						background-color: #f5f5f5;
+					}
+				}				
+
+			}
+		}
+	}
+	.mym-cRight{
+		// float:left;
+		position: relative;
+		margin-left:90px;
+		height: 100%;
+		background-color: #f5f5f5;
+		.scrollList2{
+			height: 100%;
+			.mym-crBox{		
+					background-color: #fff;	
+					clear:both;
+					overflow: hidden;
+					margin-top:10px;
+					li{
+						width: 33.333%;
+						float: left;
+						a{
+							// width: 33.33%;
+							display: block;
+							text-align: center;
+							img{
+								width: 100%;
+							}
+						}
+					}
+				
+			}
+		}
+	}
+}

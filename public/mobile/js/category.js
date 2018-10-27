@@ -34,7 +34,8 @@ $(function(){
 
 	$('body').on('tap','.getSecond',function(){
 		
-		var id = $(this).attr('data-id');
+		var id = $(this).data('id');
+		
 
 		$(this).addClass('active').siblings().removeClass('active');
 
