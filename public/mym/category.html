@@ -11,16 +11,19 @@
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/category.css">
     <script src="assets/mui/js/mui.min.js"></script>
+    <script src="./assets/artTemplate/template-web.js"></script>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="js/public.js"></script>
 </head>
 
 <body>
     <header class="mui-bar mui-bar-nav header">
         <h1 class="mui-title">天天购物网</h1>
-        <span class="mui-icon mui-icon-search mui-pull-right"></span>
+        <a href="search.html" class="mui-icon mui-icon-search mui-pull-right search"></a>
     </header>
     <nav class="mui-bar mui-bar-tab footer">
         <a class="mui-tab-item mui-active" href="index.html">
-            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-icon mui-icon-home "></span>
             <span class="mui-tab-label">首页</span>
         </a>
         <a class="mui-tab-item" href="category.html">
@@ -38,49 +41,21 @@
     </nav>
     <div class="mym-content">
         <div class="mym-cLeft">
-            <div class="mui-scroll-wrapper">
+            <div class="mui-scroll-wrapper scrollList1">
                 <div class="mui-scroll">
-                    <ul>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                        <li>1</li>
-                    </ul>
+                    <div class="links">
+                        <!-- 此处动态渲染数据                                   -->
+                    </div>
                 </div>
             </div>
         </div>
         <div class="mym-cRight">
-            <div class="mui-scroll-wrapper">
+            <div class="mui-scroll-wrapper scrollList2">
                 <div class="mui-scroll">
-                    <!--这里放置真实显示的DOM内容-->
+                    <ul class="mym-crBox">
+
+
+                    </ul>
                 </div>
             </div>
         </div>
@@ -92,6 +67,32 @@
             indicators: true,
             deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
         });
+        // <% for(var i=0;i<data.length;i++) {%>
+        //         <a href="javascript:;" class="active"><%= data[i].categoryName %></a>
+        // <% }%>
+    </script>
+    <script src="./js/category.js"></script>
+    <!-- 创建一级分类模板 -->
+    <script type='text/html' id="leftTempl">
+        <% for(var i=0;i<data.length;i++){ %>
+                <a href="javascript:;" class="secondItem" data-id='<%=data[i].id %>'><%= data[i].categoryName %></a>
+               
+            <% } %>           
+    </script>
+    <!-- 创建二级分类模板 -->
+    <script type="text/html" id="rightTempl">
+        <% for(var i=0;i<data.length;i++){%>
+                <li>
+                        <a href="javascript:;">
+                            <img src="<%= data[i].brandLogo%>" alt="">
+                            <p><%= data[i].brandName%></p>
+                        </a>
+                        
+                    </li>
+        <% }%>
+        <% if(!data.length){ %>
+                <span>暂无数据</span>
+            <% }%>
     </script>
 </body>
 
