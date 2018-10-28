@@ -1,5 +1,4 @@
 $(function(){
-
 $('#getCode').on('tap',function(){
     $.ajax({
         type:'get',

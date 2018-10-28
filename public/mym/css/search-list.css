@@ -4,3 +4,12 @@
 .search-bar{
     margin-bottom:0;
 }
+.product .name {
+    line-height: 18px;
+    display: block;
+    color: #8f8f94;
+    text-align: center;
+    padding: 6px;
+    height: 44px;
+    overflow: hidden;
+}
